@@ -1,0 +1,27 @@
+{
+  "name": "testapp",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "./testapp",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nxext/nuxt:build",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "outputPath": "dist/./testapp"
+      }
+    },
+    "serve": {
+      "executor": "@nxext/nuxt:serve",
+      "outputs": ["{options.outputFile}"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["./testapp/**/*.{ts,tsx,js,jsx,vue}"]
+      }
+    }
+  },
+  "tags": []
+}
